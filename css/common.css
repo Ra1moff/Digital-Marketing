@@ -1,3 +1,9 @@
+body {
+    &.active {
+        overflow: hidden;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +34,7 @@ ul {
 }
 
 .container {
-    max-width: 1185px;
+    max-width: 1200px;
     padding: 0 15px;
     width: 100%;
     margin: 0 auto;
@@ -53,8 +59,20 @@ input {
     font-weight: 700;
 }
 
+.carousel__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .carousel__pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     background: #F25822;
+    transition: 0.2s;
+
+    &.swiper-pagination-bullet-active {
+        width: 12px;
+        height: 12px;
+    }
 }

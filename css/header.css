@@ -143,6 +143,10 @@
     }
 }
 
+.header {
+    overflow: hidden;
+}
+
 .header > .container {
     display: flex;
     gap: 48px;

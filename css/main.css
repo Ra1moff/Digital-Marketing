@@ -66,9 +66,16 @@
 .intro__image {
     width: 640px;
     z-index: 2;
+    transform: scale(0);
+    transition: 1s;
 
     @media (width <= 1140px) {
         width: 750px;
+    }
+
+    &.active {
+        transform-origin: bottom;
+        transform: scale(1);
     }
 }
 
@@ -195,6 +202,12 @@
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 0;
+    transition: 1s;
+
+    &.appear {
+        opacity: 1;
+    }
 }
 
 .reasons__card {
@@ -374,9 +387,19 @@
     top: 50%;
     left: 50%;
     translate: -50% -50%;
+    animation: dots 1s linear infinite alternate;
 
     @media (width <= 680px) {
         display: none;
+    }
+}
+
+@keyframes dots {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
 
@@ -614,9 +637,15 @@
     padding: 86px 0 130px;
     justify-content: center;
     flex-wrap: wrap;
+    opacity: 0;
+    transition: 1s;
 
     @media (width <= 829px) {
         padding: 45px 0 45px;
+    }
+
+    &.card {
+        opacity: 1;
     }
 }
 

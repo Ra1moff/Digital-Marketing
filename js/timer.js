@@ -26,5 +26,5 @@ function intro(entry) {
     }
 }
 
-const observer = new IntersectionObserver(intro, { threshold: 0.7 })
+const observer = new IntersectionObserver(intro, { threshold: 0.5 })
 observer.observe(rating)

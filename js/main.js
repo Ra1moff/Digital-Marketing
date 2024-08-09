@@ -29,7 +29,7 @@ function introSection(enter) {
     }
 }
 
-const introObserver = new IntersectionObserver(introSection, { threshold: 1 })
+const introObserver = new IntersectionObserver(introSection, { threshold: 0.4 })
 introObserver.observe(SectionIntro)
 
 
@@ -43,7 +43,7 @@ function reasonsSection(beginnig) {
     }
 }
 
-const reasonsObserver = new IntersectionObserver(reasonsSection, { threshold: 0.5 })
+const reasonsObserver = new IntersectionObserver(reasonsSection, { threshold: 0.3 })
 reasonsObserver.observe(reasons)
 
 
@@ -57,5 +57,5 @@ function plansSection(begin) {
     }
 }
 
-const plansObserver = new IntersectionObserver(plansSection, { threshold: 0.5 })
+const plansObserver = new IntersectionObserver(plansSection, { threshold: 0.2 })
 plansObserver.observe(plans)
